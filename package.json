@@ -1,0 +1,33 @@
+{
+  "name": "mvc-twitter-app",
+  "description": "A twitter app built using the MVC design pattern",
+  "license": "MIT",
+  "author": {
+    "name": "James Gardiner",
+    "url": "https://github.com/JG075/twitter-mvc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JG075/twitter-mvc.git"
+  },
+  "keywords": [
+    "MVC",
+    "Express Application",
+    "Expressjs"
+  ],
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "~2.5.5",
+    "express": "~4.14.1",
+    "morgan": "~1.7.0",
+    "node-sass-middleware": "0.9.8",
+    "serve-favicon": "~2.3.2"
+  }
+}
