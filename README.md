@@ -15,10 +15,9 @@ This is a Twitter style MVC app built in Node.js with Express and MongoDB.
 
 You will need MongoDB installed locally for the app to work. Though you could modify it to work with a remote database.
 
-Then:
+Clone this repo, then do:
 
 ```
-git clone [THIS REPO]
 npm install
 npm start
 ```
