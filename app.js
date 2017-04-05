@@ -17,6 +17,9 @@ var bodyParser = require('body-parser');
 var index  = require('./server/routes/index');
 var users = require('./server/routes/users');
 
+// Import comments controller
+var comments = require('./server/controllers/comments');
+
 var app = express();
 
 // view engine setup
@@ -71,6 +74,10 @@ app.use(flash());
 
 app.use('/', index);
 app.use('/users', users);
+
+// Setup routes for comments
+app.get('/comments', comments.hasAuthorization, comments.list);
+app.post('/comments', comments.hasAuthorization, comments.create);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
