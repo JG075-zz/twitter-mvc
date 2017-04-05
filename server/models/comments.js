@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var commentsSchema = mongoose.Schema({
+var commentSchema = mongoose.Schema({
   created: {
     type: Date,
     default: Date.now
@@ -19,7 +19,7 @@ var commentsSchema = mongoose.Schema({
     trim: true
   },
   user: {
-    type: Schema.ObjectID,
+    type: Schema.ObjectId,
     ref: 'User'
   }
 });

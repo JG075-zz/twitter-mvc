@@ -1,5 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var passport = require('passport');
+// get gravatar icon from email
+var gravatar = require('gravatar');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -15,7 +18,7 @@ router.get('/login', function(req, res, next) {
 /* POST login */
 router.post('/login', passport.authenticate('local-login', {
   // Success go to Profile Page / Fail go to login page
-  sucessRedirect : '/profile',
+  successRedirect : '/profile',
   failureRedirect : '/login',
   failureFlash : true
 }));
@@ -29,7 +32,7 @@ router.get('/signup', function(req, res, next){
 /* POST signup */
 router.post('/signup', passport.authenticate('local-signup', {
   // Sucess go to Profile page / Faile go to Signup page
-  sucessRedirect : '/profile',
+  successRedirect : '/profile',
   failureRedirect : '/signup',
   failureFlash : true
 }));

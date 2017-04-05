@@ -1,7 +1,7 @@
 // load passport module
 var LocalStrategy = require('passport-local').Strategy;
 // load up the user model
-var User = require('../models/users');
+var User = require('../models/user');
 
 module.exports = function(passport) {
   // passport init setup
@@ -10,7 +10,7 @@ module.exports = function(passport) {
     done(null, user.id);
   });
   // deserialize the user
-  passport.deserialize(function(id, done){
+  passport.deserializeUser(function(id, done){
     User.findById(id, function(err, user){
       done(err, user);
     });

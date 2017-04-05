@@ -68,7 +68,7 @@ app.use(session({
 // Init passport authentication
 app.use(passport.initialize());
 // persistent login sessions
-app.use(passport.sessions());
+app.use(passport.session());
 // flash message
 app.use(flash());
 
